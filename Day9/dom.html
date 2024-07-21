@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 id="intro">Hello my name is jaypraksh yadab</h1>
+    </div>
+
+    <ul class="lang">
+        <li>Javascript</li>
+
+    </ul>
+
+    <div class="home" id="home2">
+        <li>room</li>
+    </div>
+
+
+
+    <button class="btn">
+        <p class="para">hi </p>
+    </button>
+
+    <button class="btn2">
+        <p>hello</p>
+    </button>
+
+</body>
+<script>
+//     Activity 1: Selecting and Manipulating Elements
+
+// . Task 1: Select an HTML element by its ID and change its text content.
+
+let intro = document.getElementById("intro")
+intro.textContent = 'hi how are u'
+
+
+// . Task 2: Select an HTML element by its class and change its background color.
+
+let intro2 = document.getElementsByClassName('intro')
+intro2.innerText = 'my name is suuuuu...'
+
+// Activity 2: Creating and Appending Elements
+
+// . Task 3: Create a new div element with some text content and append it to the body.
+
+let div = document.createElement('div')
+// div.innerText = 'hello !!!'
+
+let addText = document.createTextNode('hi how are u !!!')
+div.appendChild(addText)
+
+
+document.body.appendChild(div)
+
+
+
+// . Task 4: Create a new li element and add it to an existing ul list.
+
+let lang = document.querySelector('.lang')
+console.log(lang);
+
+let list = document.createElement('li')
+
+let lanName = document.createTextNode('python')
+list.appendChild(lanName)
+
+lang.appendChild(list)
+
+
+
+// Activity 3: Removing Elements
+
+// . Task 5: Select an HTML element and remove it from the DOM.
+
+let lang2 = document.querySelector('.lang')
+lang2.childNodes[1].remove()
+
+
+// . Task 6: Remove the last child of a specific HTML element.
+
+lang2.lastChild.remove()
+
+// Activity 4: Modifying Attributes and Classes
+
+// . Task 7: Select an HTML element and change one of its attributes (e.g., src of an img tag).
+let home = document.querySelector('home')
+
+
+
+
+
+// . Task 8: Add and remove a CSS class to/from an HTML element.
+
+
+
+// Activity 5: Event Handling
+
+// . Task 9: Add a click event listener to a button that changes the text content of a paragraph.
+let btn = document.querySelector('.btn')
+let para = document.querySelector('.para')
+
+btn.addEventListener('click', () => {
+    para.textContent = 'hi my name virat'
+})
+
+
+// . Task 10: Add a mouseover event listener to an element that changes its border color.
+
+let btn2 = document.querySelector('.btn2')
+
+btn2.addEventListener('mouseover', () => {
+    btn2.style.borderColor = 'red'
+})
+
+
+</script>
+</html>
